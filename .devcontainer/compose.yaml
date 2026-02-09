@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    depends_on:
+      - selenium
+    network_mode: host
+
+  selenium:
+    image: selenium/standalone-all-browsers
+    volumes:
+      - /dev/shm:/dev/shm 
+      - chrome_profiles:/tmp/chrome
+    ports:
+      - 4444:4444
+    network_mode: host
+    extra_hosts:
+            - "selenium:127.0.0.1"
+
+volumes:
+  chrome_profiles:
