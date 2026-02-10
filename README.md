@@ -9,6 +9,18 @@ While there are some people who claim selenium is capable... This can be through
 
 This project is expected to be run in a devcontainer using the [VS Code Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
+## Useful commands
+
+Most commands can be run with make, see the make file or run `make help`:
+```
+example                        Run on an example page
+help                           Show this help
+install                        Install all needed dependecies for project
+page_stitch                    Run page stitch selenium implementation with make 
+playwright                     Run playwright implementation with make playwright URL=<WEBSITE>
+selenium                       Run base selenium implementation with make selenium URL=<WEBSITE>
+```
+
 ## Implementations
 
 ### selenium
